@@ -1,0 +1,150 @@
+{
+  "basics": {
+    "name": "Jatin Attri",
+    "title": "Full Stack Developer | MCA Student | UI/UX Enthusiast",
+    "summary": "High-performing MCA student and Full Stack Developer with a specialized focus on Next.js and the MERN stack. Recently completed a 6-month intensive internship at Code Scaler, developing SEO-optimized, high-performance web architectures. Recognized as a State-Level Winner in digital design and an official member of the CRSU CodeVerse team, blending technical precision with creative UI/UX expertise.",
+    "location": "Jind (Haryana)",
+    "email": "jatinatri2004@gmail.com",
+    "phone": "+91 95186 26265",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/jatinattri001"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "Code Scaler",
+      "role": "Full Stack Developer Intern",
+      "dates": "08/2025 – 01/2026",
+      "location": "Remote / Hybrid",
+      "bullets": [
+        "Mastered modern web architecture using the MERN Stack and Next.js in a professional collaborative environment.",
+        "Developed high-performance, SEO-optimized user interfaces and scalable server-side logic.",
+        "Executed the full development lifecycle, including version control, advanced debugging, and production-ready deployments."
+      ]
+    },
+    {
+      "company": "CRSU CodeVerse",
+      "role": "Official Team Member",
+      "dates": "09/2025 – Present",
+      "location": "Jind, Haryana",
+      "bullets": [
+        "Collaborating on university-led digital solutions and mentoring peers in modern web frameworks."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "2x State-Level Winner",
+      "context": "Documentary Film-Making"
+    },
+    {
+      "title": "Runner-Up",
+      "context": "State-Level Digital Logo Design Competition"
+    },
+    {
+      "title": "Multiple Awards",
+      "context": "Photography at university fests"
+    },
+    {
+      "title": "Microsoft Industry Insight",
+      "context": "Completed advanced sessions on security and tech consulting at the Microsoft Noida 'Taj Mahal' office."
+    }
+  ],
+  "projects": [
+    {
+      "title": "First Next.js Frontend Project",
+      "stack": ["Next.js", "React", "SSR", "UI Design"],
+      "bullets": [
+        "Built a frontend project from scratch exploring the power of server-side rendering, routing, and modern UI design principles.",
+        "Deeply understood how performance and design come together to create seamless user experiences."
+      ],
+      "links": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/jatinattri001"
+        }
+      ]
+    },
+    {
+      "title": "Next.js Performance Project (Live)",
+      "stack": ["Next.js", "React", "SEO"],
+      "bullets": [
+        "Developed an SEO-optimized frontend application focusing on performance, server-side rendering, and modern UI design principles."
+      ],
+      "links": []
+    },
+    {
+      "title": "Wanderlust (Final Year Project)",
+      "stack": ["HTML", "CSS", "JS", "Node.js", "Express.js", "MongoDB", "Google Maps API"],
+      "bullets": [
+        "Hotel booking web platform with user accounts, secure payments, Google Maps integration, and admin panel."
+      ],
+      "links": []
+    },
+    {
+      "title": "AI-Integrated Code Editor",
+      "stack": ["AI", "Web Technologies"],
+      "bullets": [
+        "Awarded 2nd Prize. Real-time intelligent coding assistant with live preview and productivity boosters."
+      ],
+      "links": []
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["Next.js (SSR, Routing)", "React.js", "HTML5", "CSS3", "JavaScript"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Express.js", "RESTful API Development"]
+    },
+    {
+      "category": "Database",
+      "items": ["MongoDB (Schema Design, Data Management)"]
+    },
+    {
+      "category": "Creative & Design",
+      "items": ["UI/UX Design (Canva)", "Video Editing (Post-production)", "Digital Storytelling"]
+    },
+    {
+      "category": "Developer Tools",
+      "items": ["Git", "GitHub", "VS Code", "Vercel", "Google Maps API"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Chaudhary Ranbir Singh University (CRSU), Jind",
+      "degree": "Master of Computer Applications (MCA)",
+      "dates": "Expected 2027"
+    },
+    {
+      "institution": "Government College, Jind",
+      "degree": "Bachelor of Computer Applications (B.C.A.) - 71.2%",
+      "dates": "2022 – 2025"
+    },
+    {
+      "institution": "Government Sr. Secondary School, Haryana",
+      "degree": "Senior Secondary (Commerce) - 85.8%",
+      "dates": "2022"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Digital Productivity Course (P2E by UNICEF-YuWaah)",
+      "issuer": "Certificate of Merit"
+    },
+    {
+      "name": "Language Proficiency",
+      "issuer": "IELTS (6.5 Band) and PTE Academic (Score: 63)"
+    }
+  ],
+  "awards": [],
+  "extra": [
+    "Career Goal: To leverage my full-stack expertise and creative background to build a successful motivational e-commerce brand and grow as a tech entrepreneur.",
+    "DOB: 29 February 2004 | Gender: Male"
+  ]
+}
