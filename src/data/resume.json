@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Jatin Attri",
-    "title": "Full Stack Developer | MCA Student | UI/UX Enthusiast",
+    "title": "AI & Full Stack Developer | 💻 MCA Student | UI/UX Enthusiast",
     "summary": "High-performing MCA student and Full Stack Developer with a specialized focus on Next.js and the MERN stack. Recently completed a 6-month intensive internship at Code Scaler, developing SEO-optimized, high-performance web architectures. Recognized as a State-Level Winner in digital design and an official member of the CRSU CodeVerse team, blending technical precision with creative UI/UX expertise.",
     "location": "Jind (Haryana)",
     "email": "jatinatri2004@gmail.com",
@@ -17,7 +17,7 @@
     {
       "company": "Code Scaler",
       "role": "Full Stack Developer Intern",
-      "dates": "08/2025 – 01/2026",
+      "dates": "05/2025 – 01/2026",
       "location": "Remote / Hybrid",
       "bullets": [
         "Mastered modern web architecture using the MERN Stack and Next.js in a professional collaborative environment.",
@@ -96,7 +96,7 @@
   "skills": [
     {
       "category": "Frontend",
-      "items": ["Next.js (SSR, Routing)", "React.js", "HTML5", "CSS3", "JavaScript"]
+      "items": ["Next.js (SSR, Routing)", "React.js", "HTML5", "CSS3","Tailwind CSS", "JavaScript"]
     },
     {
       "category": "Backend",
@@ -113,7 +113,35 @@
     {
       "category": "Developer Tools",
       "items": ["Git", "GitHub", "VS Code", "Vercel", "Google Maps API"]
-    }
+    },
+    {
+      "category": "Soft Skills",
+      "items": ["Effective Communication", "Team Collaboration", "Problem-Solving", "Adaptability"]
+    },
+    {
+      "category": "Languages",
+      "items": ["English (Fluent)", "Hindi (Native)"]
+    },
+    {
+      "category": "AI & Emerging Tech",
+      "items": ["AI Integration in Web Development", "Familiarity with AI Tools and Concepts"]
+    },
+    {
+  "category": "AI & Agentic Development",
+  "items": [
+    "Google AI Studio", 
+    "Base44", 
+    "ChatGPT-4o", 
+    "GitHub Copilot (Agent Mode)", 
+    "Cursor", 
+    "Claude Code", 
+    "Vercel v0"
+  
+  ]
+}
+   
+
+    
   ],
   "education": [
     {
@@ -133,6 +161,42 @@
     }
   ],
   "certifications": [
+    {
+      "name": "Full Stack Web Development (MERN) with NextJS & Internship",
+      "issuer": "Code Scaler (Recognized by Ministry of MSME, Govt. of India)"
+    },
+    {
+      "name": "MY Bharat Budget Quest 2026",
+      "issuer": "Ministry of Youth Affairs & Sports, Govt. of India"
+    },
+    {
+      "name": "Atmanirbhar Bharat: Mission to Achieve Self-Reliance Quiz",
+      "issuer": "Ministry of Defence & MyGov"
+    },
+    {
+      "name": "Mahakal Astronomy Instruments Quiz",
+      "issuer": "Indian Knowledge System (IKS) Division, Ministry of Education"
+    },
+    {
+      "name": "Bharatiya Gyan Quiz on Knowing Bharat",
+      "issuer": "IKS Division, Ministry of Education"
+    },
+    {
+      "name": "Vande Mataram - 150 Years Quiz",
+      "issuer": "Ministry of Culture & MyGov"
+    },
+    {
+      "name": "Fit India Commonwealth Quiz",
+      "issuer": "Fit India Mission, Ministry of Youth Affairs and Sports"
+    },
+    {
+      "name": "India's Achievements in Sports Quiz",
+      "issuer": "Ministry of Defence & MyGov"
+    },
+    {
+      "name": "IDPD Quiz",
+      "issuer": "NCERT & Ministry of Education"
+    },
     {
       "name": "Digital Productivity Course (P2E by UNICEF-YuWaah)",
       "issuer": "Certificate of Merit"
