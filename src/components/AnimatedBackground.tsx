@@ -84,16 +84,57 @@ export default function AnimatedBackground() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw soft gradient mesh background
+      // Deep gradient base
       const gradient = ctx.createLinearGradient(
         0,
         0,
         canvas.width,
         canvas.height,
       );
-      gradient.addColorStop(0, "#0f172a"); // slate-900
-      gradient.addColorStop(1, "#020617"); // slate-950
+      gradient.addColorStop(0, "#040711");
+      gradient.addColorStop(0.5, "#070f22");
+      gradient.addColorStop(1, "#041326");
       ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Ambient radial lights for a richer theme
+      const glowA = ctx.createRadialGradient(
+        canvas.width * 0.18,
+        canvas.height * 0.22,
+        20,
+        canvas.width * 0.18,
+        canvas.height * 0.22,
+        canvas.width * 0.45,
+      );
+      glowA.addColorStop(0, "rgba(34, 211, 238, 0.16)");
+      glowA.addColorStop(1, "rgba(34, 211, 238, 0)");
+      ctx.fillStyle = glowA;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const glowB = ctx.createRadialGradient(
+        canvas.width * 0.82,
+        canvas.height * 0.18,
+        20,
+        canvas.width * 0.82,
+        canvas.height * 0.18,
+        canvas.width * 0.4,
+      );
+      glowB.addColorStop(0, "rgba(56, 189, 248, 0.14)");
+      glowB.addColorStop(1, "rgba(56, 189, 248, 0)");
+      ctx.fillStyle = glowB;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const glowC = ctx.createRadialGradient(
+        canvas.width * 0.5,
+        canvas.height * 0.92,
+        30,
+        canvas.width * 0.5,
+        canvas.height * 0.92,
+        canvas.width * 0.5,
+      );
+      glowC.addColorStop(0, "rgba(16, 185, 129, 0.12)");
+      glowC.addColorStop(1, "rgba(16, 185, 129, 0)");
+      ctx.fillStyle = glowC;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       if (!isReducedMotion) {
@@ -121,7 +162,7 @@ export default function AnimatedBackground() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 z-[-1] pointer-events-none"
-      style={{ background: "#020617" }}
+      style={{ background: "#050816" }}
     />
   );
 }

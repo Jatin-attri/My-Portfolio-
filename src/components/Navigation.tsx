@@ -56,7 +56,7 @@ export default function Navigation() {
   return (
     <motion.header
       animate={{
-        backgroundColor: scrolled ? "rgba(2, 6, 23, 0.78)" : "rgba(2, 6, 23, 0)",
+        backgroundColor: scrolled ? "rgba(4, 12, 28, 0.78)" : "rgba(4, 12, 28, 0)",
         backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
       }}
       transition={{ duration: 0.35, ease: "easeOut" }}
@@ -67,15 +67,20 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-6 md:px-12 flex items-center justify-between">
         <motion.a
           href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setActiveHash("#experience");
+          }}
           whileHover={{ scale: 1.04, y: -1 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="relative text-xl font-bold tracking-tighter text-white hover:text-indigo-300 transition-colors"
+          className="relative text-xl font-bold tracking-tighter text-white hover:text-cyan-300 transition-colors"
         >
-          <span className="absolute -inset-2 rounded-lg bg-indigo-500/10 blur-md opacity-0 hover:opacity-100 transition-opacity duration-300" />
+          <span className="absolute -inset-2 rounded-lg bg-cyan-500/10 blur-md opacity-0 hover:opacity-100 transition-opacity duration-300" />
           JA.
         </motion.a>
 
-        <nav className="hidden md:flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-2 py-1.5">
+        <nav className="hidden md:flex items-center gap-2 rounded-full border border-slate-200/15 bg-slate-900/40 px-2 py-1.5">
           {navLinks.map((link) => (
             <motion.a
               key={link.name}
@@ -93,7 +98,7 @@ export default function Navigation() {
                 <motion.span
                   layoutId="activeNavPill"
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  className="absolute inset-0 rounded-full border border-indigo-400/30 bg-indigo-500/20 shadow-[0_0_18px_rgba(99,102,241,0.22)]"
+                  className="absolute inset-0 rounded-full border border-cyan-300/35 bg-cyan-400/20 shadow-[0_0_18px_rgba(34,211,238,0.22)]"
                 />
               )}
               <span className="relative z-10">{link.name}</span>
@@ -110,14 +115,14 @@ export default function Navigation() {
             }}
             whileHover={{ scale: 1.04, y: -1 }}
             whileTap={{ scale: 0.95 }}
-            className="ml-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-indigo-500/70 to-cyan-500/60 hover:from-indigo-500 hover:to-cyan-500 rounded-full transition-all border border-indigo-300/25 shadow-[0_0_20px_rgba(56,189,248,0.18)]"
+            className="ml-2 px-4 py-2 text-sm font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 rounded-full transition-all border border-cyan-200/45 shadow-[0_0_20px_rgba(56,189,248,0.3)]"
           >
             Contact
           </motion.a>
         </nav>
 
         <button
-          className="md:hidden text-slate-300"
+          className="md:hidden text-slate-300 hover:text-cyan-300 transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X /> : <Menu />}
@@ -131,7 +136,7 @@ export default function Navigation() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -14, scale: 0.98 }}
             transition={{ duration: 0.24, ease: "easeOut" }}
-            className="absolute top-full left-0 right-0 bg-[#020617]/95 backdrop-blur-xl border-b border-white/10 py-4 px-6 md:hidden flex flex-col gap-2"
+            className="absolute top-full left-0 right-0 bg-[#050b1d]/95 backdrop-blur-xl border-b border-white/10 py-4 px-6 md:hidden flex flex-col gap-2"
           >
             {navLinks.map((link, index) => (
               <motion.a
@@ -146,7 +151,7 @@ export default function Navigation() {
                 transition={{ delay: index * 0.04, duration: 0.2 }}
                 className={`px-3 py-2.5 rounded-lg text-base font-medium transition-colors ${
                   activeHash === link.href
-                    ? "text-white bg-indigo-500/20 border border-indigo-400/25"
+                    ? "text-white bg-cyan-500/20 border border-cyan-300/35"
                     : "text-slate-300 hover:text-white hover:bg-white/5"
                 }`}
               >
@@ -166,7 +171,7 @@ export default function Navigation() {
               initial={{ opacity: 0, x: -12 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: navLinks.length * 0.04, duration: 0.2 }}
-              className="mt-1 px-3 py-2.5 rounded-lg text-base font-medium text-white bg-gradient-to-r from-indigo-500/70 to-cyan-500/60 border border-indigo-300/25"
+              className="mt-1 px-3 py-2.5 rounded-lg text-base font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-sky-400 border border-cyan-200/45"
             >
               Contact
             </motion.a>

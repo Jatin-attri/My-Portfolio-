@@ -15,7 +15,7 @@ export default function Experience({ data }: { data: any[] }) {
       >
         <div className="flex items-center gap-4">
           <h2 className="text-3xl font-bold text-white">Experience</h2>
-          <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
+          <div className="h-px flex-1 section-line" />
         </div>
 
         <div className="space-y-4">
@@ -23,10 +23,10 @@ export default function Experience({ data }: { data: any[] }) {
             <motion.div
               key={index}
               whileHover={{ x: 4 }}
-              className={`rounded-2xl border transition-all duration-300 overflow-hidden hover:shadow-[0_0_20px_rgba(99,102,241,0.1)] hover:border-indigo-500/30 ${
+              className={`rounded-2xl border transition-all duration-300 overflow-hidden hover:shadow-[0_18px_35px_-20px_rgba(34,211,238,0.45)] hover:border-cyan-300/35 ${
                 expandedIndex === index
-                  ? "bg-white/5 border-white/10"
-                  : "bg-transparent border-white/5 hover:bg-white/[0.02]"
+                  ? "glass-card border-slate-300/25"
+                  : "bg-transparent border-slate-300/10 hover:bg-white/[0.03]"
               }`}
             >
               <button
@@ -39,7 +39,7 @@ export default function Experience({ data }: { data: any[] }) {
                   <h3 className="text-xl font-semibold text-white">
                     {job.role}
                   </h3>
-                  <div className="text-indigo-400 font-medium mt-1">
+                  <div className="text-cyan-300 font-semibold mt-1">
                     {job.company}
                   </div>
                   <div className="flex flex-wrap items-center gap-4 mt-3 text-sm text-slate-500">
@@ -53,7 +53,7 @@ export default function Experience({ data }: { data: any[] }) {
                 </div>
                 <motion.div
                   animate={{ rotate: expandedIndex === index ? 180 : 0 }}
-                  className="p-2 rounded-full bg-white/5 text-slate-400"
+                  className="p-2 rounded-full bg-white/5 text-slate-300"
                 >
                   <ChevronDown size={20} />
                 </motion.div>
@@ -73,7 +73,7 @@ export default function Experience({ data }: { data: any[] }) {
                           key={i}
                           className="flex items-start gap-3 text-slate-300 text-sm leading-relaxed"
                         >
-                          <div className="w-1.5 h-1.5 rounded-full bg-indigo-500/50 mt-2 shrink-0" />
+                          <div className="w-1.5 h-1.5 rounded-full bg-cyan-300/70 mt-2 shrink-0" />
                           <p>{bullet}</p>
                         </div>
                       ))}

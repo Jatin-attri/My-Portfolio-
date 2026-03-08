@@ -16,8 +16,8 @@ export default function Hero({ data, extra }: { data: any; extra: string[] }) {
         className="space-y-6"
       >
         <div className="space-y-4">
-          <div className="inline-flex w-fit items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
+          <div className="inline-flex w-fit items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-300/25 text-cyan-200 text-sm font-semibold">
+            <span className="w-2 h-2 rounded-full bg-cyan-300 animate-pulse" />
             Available for opportunities
           </div>
 
@@ -25,7 +25,7 @@ export default function Hero({ data, extra }: { data: any; extra: string[] }) {
             initial="hidden"
             animate="show"
             whileHover="hover"
-            className="relative block w-fit overflow-hidden text-5xl md:text-7xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-200 to-indigo-400 leading-tight pb-2"
+            className="relative block w-fit overflow-hidden text-5xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-sky-100 to-cyan-300 leading-tight pb-2"
           >
             <motion.span
               aria-hidden
@@ -78,11 +78,11 @@ export default function Hero({ data, extra }: { data: any; extra: string[] }) {
           </motion.h1>
         </div>
 
-        <h2 className="text-xl md:text-2xl text-slate-400 max-w-3xl leading-relaxed">
+        <h2 className="text-xl md:text-2xl text-slate-300 max-w-3xl leading-relaxed">
           {data.title}
         </h2>
 
-        <p className="text-lg text-slate-500 max-w-2xl leading-relaxed">
+        <p className="text-lg text-slate-400 max-w-2xl leading-relaxed">
           {data.summary}
         </p>
 
@@ -91,7 +91,7 @@ export default function Hero({ data, extra }: { data: any; extra: string[] }) {
             href="#experience"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-slate-900 font-medium rounded-full hover:bg-slate-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-400 to-sky-400 text-slate-950 font-semibold rounded-full shadow-[0_0_25px_rgba(56,189,248,0.35)] hover:shadow-[0_0_32px_rgba(34,211,238,0.45)] transition-all"
           >
             View Experience
             <ArrowDown size={18} />
@@ -101,14 +101,14 @@ export default function Hero({ data, extra }: { data: any; extra: string[] }) {
             download="Jatin_resume.pdf"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/5 text-white font-medium rounded-full border border-white/10 hover:bg-white/10 transition-colors hover:border-white/30"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/[0.04] text-white font-semibold rounded-full border border-slate-300/20 hover:bg-white/[0.08] transition-colors hover:border-cyan-300/35"
           >
             Download Resume
             <Download size={18} />
           </motion.a>
         </div>
 
-        <div className="flex flex-wrap items-center gap-6 pt-8 text-sm text-slate-500">
+        <div className="flex flex-wrap items-center gap-6 pt-8 text-sm text-slate-400">
           <div className="flex items-center gap-2">
             <MapPin size={16} />
             {data.location}
@@ -123,7 +123,7 @@ export default function Hero({ data, extra }: { data: any; extra: string[] }) {
               href={link.url}
               target="_blank"
               rel="noreferrer"
-              className="hover:text-indigo-400 transition-colors"
+              className="hover:text-cyan-300 transition-colors"
             >
               {link.name}
             </a>
@@ -138,7 +138,7 @@ export default function Hero({ data, extra }: { data: any; extra: string[] }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
               whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.08)" }}
-              className="p-4 rounded-2xl bg-white/5 border border-white/5 text-sm text-slate-400 transition-colors"
+              className="glass-card p-4 rounded-2xl text-sm text-slate-300 transition-colors"
             >
               {item}
             </motion.div>

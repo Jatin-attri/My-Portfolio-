@@ -4,10 +4,10 @@ import { Trophy, Award, Star, Zap } from "lucide-react";
 export default function Achievements({ data }: { data: any[] }) {
   const icons = [Trophy, Award, Star, Zap];
   const cardAccent = [
-    "from-amber-500/30 via-orange-500/15 to-transparent",
-    "from-sky-500/30 via-indigo-500/15 to-transparent",
+    "from-cyan-500/30 via-sky-500/15 to-transparent",
     "from-emerald-500/30 via-teal-500/15 to-transparent",
-    "from-fuchsia-500/30 via-pink-500/15 to-transparent",
+    "from-blue-500/30 via-cyan-500/15 to-transparent",
+    "from-amber-500/30 via-orange-500/15 to-transparent",
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function Achievements({ data }: { data: any[] }) {
           aria-hidden
           animate={{ y: [0, -10, 0], x: [0, 6, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-8 left-10 h-20 w-20 rounded-full bg-indigo-500/10 blur-2xl"
+          className="absolute -top-8 left-10 h-20 w-20 rounded-full bg-cyan-500/10 blur-2xl"
         />
         <motion.div
           aria-hidden
@@ -33,10 +33,10 @@ export default function Achievements({ data }: { data: any[] }) {
 
         <div className="flex items-center gap-4">
           <h2 className="text-3xl font-bold text-white">Achievements</h2>
-          <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
+          <div className="h-px flex-1 section-line" />
           <motion.div
             whileHover={{ scale: 1.06 }}
-            className="hidden md:inline-flex items-center rounded-full border border-amber-400/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold tracking-wide text-amber-300"
+            className="hidden md:inline-flex items-center rounded-full border border-cyan-300/35 bg-cyan-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-cyan-200"
           >
             {data.length} Highlights
           </motion.div>
@@ -57,7 +57,7 @@ export default function Achievements({ data }: { data: any[] }) {
                   ease: "easeOut",
                 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="group relative p-6 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10 overflow-hidden hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-300"
+                className="group relative p-6 rounded-2xl glass-card overflow-hidden hover:border-cyan-300/35 hover:shadow-[0_20px_35px_-18px_rgba(34,211,238,0.4)] transition-all duration-300"
               >
                 <div
                   className={`absolute -top-10 -right-8 h-28 w-28 rounded-full bg-gradient-to-br ${cardAccent[index % cardAccent.length]} blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-500`}
@@ -75,7 +75,7 @@ export default function Achievements({ data }: { data: any[] }) {
                 <div className="relative z-10">
                   <motion.div
                     whileHover={{ rotate: 8, scale: 1.06 }}
-                    className="w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4"
+                    className="w-12 h-12 rounded-full bg-cyan-400/15 border border-cyan-300/20 flex items-center justify-center text-cyan-200 mb-4"
                   >
                     <Icon size={24} />
                   </motion.div>

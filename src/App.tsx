@@ -23,8 +23,12 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen text-slate-200 font-sans selection:bg-indigo-500/30">
+    <div className="min-h-screen text-slate-100 font-sans">
       <AnimatedBackground />
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 z-0 opacity-[0.16] [background-image:radial-gradient(circle_at_1px_1px,rgba(148,163,184,0.45)_1px,transparent_0)] [background-size:22px_22px]"
+      />
 
       <AnimatePresence mode="wait">
         {loading ? (
