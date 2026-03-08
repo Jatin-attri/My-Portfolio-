@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 import { ArrowDown, Download, Mail, MapPin } from "lucide-react";
 
 export default function Hero({ data, extra }: { data: any; extra: string[] }) {
+  const nameWords = String(data.name || "").split(" ");
+
   return (
     <section
       className="min-h-[90vh] flex flex-col justify-center pt-20"
@@ -13,14 +15,68 @@ export default function Hero({ data, extra }: { data: any; extra: string[] }) {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="space-y-6"
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm font-medium">
-          <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
-          Available for opportunities
-        </div>
+        <div className="space-y-4">
+          <div className="inline-flex w-fit items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm font-medium">
+            <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
+            Available for opportunities
+          </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-200 to-indigo-400 leading-tight pb-2">
-          {data.name}
-        </h1>
+          <motion.h1
+            initial="hidden"
+            animate="show"
+            whileHover="hover"
+            className="relative block w-fit overflow-hidden text-5xl md:text-7xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-200 to-indigo-400 leading-tight pb-2"
+          >
+            <motion.span
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 -left-10 w-16 -skew-x-12 bg-gradient-to-r from-transparent via-white/25 to-transparent"
+              variants={{
+                hidden: { opacity: 0, x: "-120%" },
+                show: { opacity: 0, x: "-120%" },
+                hover: {
+                  opacity: [0, 1, 0],
+                  x: "200%",
+                  transition: { duration: 0.9, ease: "easeInOut" },
+                },
+              }}
+            />
+
+            {nameWords.map((word: string, wordIndex: number) => (
+              <span
+                key={`${word}-${wordIndex}`}
+                className={`inline-block ${
+                  wordIndex < nameWords.length - 1 ? "mr-[0.35em]" : ""
+                }`}
+              >
+                {word.split("").map((char: string, charIndex: number) => (
+                  <motion.span
+                    key={`${char}-${charIndex}`}
+                    variants={{
+                      hidden: { opacity: 0, y: 40, rotateX: -65 },
+                      show: {
+                        opacity: 1,
+                        y: 0,
+                        rotateX: 0,
+                        transition: {
+                          delay: 0.28 + (wordIndex * 0.12 + charIndex * 0.03),
+                          duration: 0.5,
+                          ease: "easeOut",
+                        },
+                      },
+                      hover: {
+                        y: [0, -3, 0],
+                        transition: { duration: 0.35, ease: "easeInOut" },
+                      },
+                    }}
+                    className="inline-block"
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </span>
+            ))}
+          </motion.h1>
+        </div>
 
         <h2 className="text-xl md:text-2xl text-slate-400 max-w-3xl leading-relaxed">
           {data.title}

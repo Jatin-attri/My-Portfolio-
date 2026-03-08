@@ -1,7 +1,14 @@
 import { motion } from "motion/react";
-import { ExternalLink, Code2 } from "lucide-react";
+import { ExternalLink, Code2, Sparkles } from "lucide-react";
 
 export default function Projects({ data }: { data: any[] }) {
+  const accents = [
+    "from-indigo-500/25 via-blue-500/10 to-transparent",
+    "from-cyan-500/25 via-sky-500/10 to-transparent",
+    "from-emerald-500/25 via-teal-500/10 to-transparent",
+    "from-amber-500/25 via-orange-500/10 to-transparent",
+  ];
+
   return (
     <section id="projects" className="scroll-mt-32">
       <motion.div
@@ -13,56 +20,89 @@ export default function Projects({ data }: { data: any[] }) {
         <div className="flex items-center gap-4">
           <h2 className="text-3xl font-bold text-white">Projects</h2>
           <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
+          <div className="hidden md:inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-semibold text-slate-300">
+            <Sparkles size={13} className="text-indigo-300" />
+            Featured Work
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {data.map((project, index) => (
+          {data.map((project, index) => {
+            const accent = accents[index % accents.length];
+            return (
             <motion.div
               key={index}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="flex flex-col p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-300"
+              initial={{ opacity: 0, y: 28, scale: 0.98 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{
+                delay: index * 0.08,
+                duration: 0.45,
+                ease: "easeOut",
+              }}
+              whileHover={{ y: -9, scale: 1.02 }}
+              className="group relative flex flex-col p-6 rounded-2xl bg-gradient-to-b from-white/[0.045] to-white/[0.015] border border-white/10 hover:border-indigo-400/40 hover:shadow-[0_18px_40px_-20px_rgba(99,102,241,0.5)] transition-all duration-300 overflow-hidden"
             >
+              <div
+                className={`absolute -top-12 -right-8 h-28 w-28 rounded-full bg-gradient-to-br ${accent} blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500`}
+              />
+              <motion.div
+                aria-hidden
+                initial={{ x: "-120%" }}
+                whileHover={{ x: "140%" }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                className="absolute inset-y-0 w-20 -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+              />
+
               <div className="flex items-center justify-between mb-4">
-                <div className="p-2.5 rounded-xl bg-white/5 text-slate-300">
+                <motion.div
+                  whileHover={{ rotate: -6, scale: 1.08 }}
+                  className="p-2.5 rounded-xl bg-indigo-500/15 border border-indigo-400/20 text-indigo-200"
+                >
                   <Code2 size={20} />
-                </div>
+                </motion.div>
                 {project.links && project.links.length > 0 && (
                   <a
                     href={project.links[0].url}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-slate-500 hover:text-white transition-colors"
+                    className="relative z-10 inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.04] text-slate-300 hover:text-white hover:border-indigo-400/40 hover:bg-indigo-500/10 transition-all"
                   >
+                    Live
                     <ExternalLink size={20} />
                   </a>
                 )}
               </div>
 
-              <h3 className="text-xl font-semibold text-white mb-3">
+              <h3 className="relative z-10 text-xl font-semibold text-white mb-3 leading-tight">
                 {project.title}
               </h3>
 
-              <div className="space-y-2 mb-6 flex-1">
+              <div className="relative z-10 space-y-2 mb-6 flex-1">
                 {project.bullets.map((bullet: string, i: number) => (
-                  <p key={i} className="text-sm text-slate-400 leading-relaxed">
-                    {bullet}
-                  </p>
+                  <div key={i} className="flex items-start gap-2.5">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-indigo-400/70 shrink-0" />
+                    <p className="text-sm text-slate-300/90 leading-relaxed">
+                      {bullet}
+                    </p>
+                  </div>
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-2 mt-auto">
+              <div className="relative z-10 flex flex-wrap gap-2 mt-auto">
                 {project.stack.map((tech: string, i: number) => (
                   <motion.span
                     key={i}
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    className="px-2.5 py-1 text-xs font-medium rounded-md bg-white/5 text-slate-300 border border-white/5 hover:bg-indigo-500/20 hover:border-indigo-500/50 hover:text-white hover:shadow-[0_0_10px_rgba(99,102,241,0.3)] transition-all duration-300 cursor-default"
+                    whileHover={{ scale: 1.06, y: -2 }}
+                    className="px-2.5 py-1 text-xs font-semibold rounded-md bg-white/5 text-slate-200 border border-white/10 hover:bg-indigo-500/20 hover:border-indigo-400/50 hover:text-white hover:shadow-[0_0_12px_rgba(99,102,241,0.35)] transition-all duration-300 cursor-default"
                   >
                     {tech}
                   </motion.span>
                 ))}
               </div>
             </motion.div>
-          ))}
+          );
+          })}
         </div>
       </motion.div>
     </section>
