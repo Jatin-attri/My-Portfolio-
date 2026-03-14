@@ -55,6 +55,20 @@
   ],
   "projects": [
     {
+      "title": "Oxford Public School Website",
+      "stack": ["Next.js", "React", "Responsive Design", "SEO"],
+      "bullets": [
+        "Designed and developed the official school website with a clean and responsive UI for students, parents, and visitors.",
+        "Built key pages such as home, about, academics, admissions, and contact to present complete school information online."
+      ],
+      "links": [
+        {
+          "name": "Live Website",
+          "url": "https://www.oxfordpillukhera.in/"
+        }
+      ]
+    },
+    {
       "title": "First Next.js Frontend Project",
       "stack": ["Next.js", "React", "SSR", "UI Design"],
       "bullets": [
@@ -64,7 +78,7 @@
       "links": [
         {
           "name": "GitHub",
-          "url": "https://github.com/jatinattri001"
+          "url": "https://www.linkedin.com/in/jatinattri001/recent-activity/all/"
         }
       ]
     },
